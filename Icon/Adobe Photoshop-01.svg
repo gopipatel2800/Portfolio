@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 27.3.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+<style type="text/css">
+	.st0{opacity:0.41;fill:url(#XMLID_00000020368182740268577020000002252782359792043694_);}
+	.st1{opacity:0.56;fill:url(#XMLID_00000045588189904509350900000016403219316803801245_);}
+	.st2{fill:#072138;}
+	.st3{fill:#5AA6DC;}
+</style>
+<g>
+	<g>
+		
+			<radialGradient id="XMLID_00000098202656362155484590000005372068990881829556_" cx="255.5287" cy="256.4023" r="210.0531" gradientUnits="userSpaceOnUse">
+			<stop  offset="0.8929" style="stop-color:#010101"/>
+			<stop  offset="0.9022" style="stop-color:#1D1D1D"/>
+			<stop  offset="0.9298" style="stop-color:#6C6C6C"/>
+			<stop  offset="0.9543" style="stop-color:#ABABAB"/>
+			<stop  offset="0.975" style="stop-color:#D9D9D9"/>
+			<stop  offset="0.9908" style="stop-color:#F5F5F5"/>
+			<stop  offset="1" style="stop-color:#FFFFFF"/>
+		</radialGradient>
+		
+			<circle id="XMLID_22035_" style="opacity:0.41;fill:url(#XMLID_00000098202656362155484590000005372068990881829556_);" cx="255.53" cy="256.4" r="210.05"/>
+		
+			<radialGradient id="XMLID_00000018933931988674797630000017654277870388204432_" cx="5677.1206" cy="-4713.1191" r="202.3268" gradientTransform="matrix(-1 0 0 -1 5973.0386 -4416.7285)" gradientUnits="userSpaceOnUse">
+			<stop  offset="0.0204" style="stop-color:#C4C4C4"/>
+			<stop  offset="0.2934" style="stop-color:#C8C8C8"/>
+			<stop  offset="0.5378" style="stop-color:#D3D3D3"/>
+			<stop  offset="0.7704" style="stop-color:#E5E5E5"/>
+			<stop  offset="0.9958" style="stop-color:#FEFEFE"/>
+			<stop  offset="1" style="stop-color:#FFFFFF"/>
+		</radialGradient>
+		
+			<circle id="XMLID_22027_" style="opacity:0.56;fill:url(#XMLID_00000018933931988674797630000017654277870388204432_);" cx="253.62" cy="254.09" r="146.74"/>
+	</g>
+	<g>
+		<circle id="XMLID_00000113313102181928925210000005485059717934537380_" class="st2" cx="255.53" cy="256.4" r="194.64"/>
+		<g>
+			<g>
+				<path class="st3" d="M152.01,178.94h47.92c33.78,0,58.81,11.73,58.81,46.9c0,33.92-25.12,49.32-57.88,49.32H179v55.92h-26.99
+					V178.94z M198.63,253.56c22.7,0,33.5-9.03,33.5-27.73c0-18.89-11.82-25.31-34.43-25.31H179v53.04H198.63z"/>
+				<path class="st3" d="M271.39,317.96l12.47-17.03c10.14,7.91,19.96,12.75,31.54,12.75c12.47,0,18.33-5.86,18.33-13.68
+					c0-9.58-12.37-13.86-24.56-18.52c-14.98-5.63-32.1-14.24-32.1-33.31c0-19.82,16.01-34.15,41.59-34.15
+					c15.91,0,28.66,6.47,37.96,13.68l-12.28,16.47c-8-5.86-16.05-9.96-25.03-9.96c-11.49,0-16.93,5.49-16.93,12.65
+					c0,9.03,11.54,12.47,23.91,17.03c15.45,5.77,32.75,13.21,32.75,34.52c0,19.63-15.54,35.45-44.38,35.45
+					C299.03,333.87,282.56,327.17,271.39,317.96z"/>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>

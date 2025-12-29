@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Gopi Zalavadiya - Passionate Graphic Design & UI/UX Designer with expertise in design principles and user-centered design">
+    <meta name="keywords" content="UI/UX Designer, Graphic Designer, Portfolio, Web Design">
+    <meta name="author" content="Gopi Zalavadiya">
+    <title>Gopi Zalavadiya | UI/UX & Graphic Designer</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Particle Background -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#home" class="logo">
+                <span class="logo-text">GZ</span>
+            </a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#achievements" class="nav-link">Achievements</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        Hi, I'm <span class="gradient-text">Gopi Zalavadiya</span>
+                    </h1>
+                    <h2 class="hero-subtitle">
+                        <span id="typed-text"></span>
+                        <span class="cursor">|</span>
+                    </h2>
+                    <p class="hero-description">
+                        Passionate about creating visually appealing and user-friendly interfaces
+                        that bring ideas to life through innovative design solutions.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary">
+                            <i class="fas fa-envelope"></i> Get In Touch
+                        </a>
+                        <a href="#projects" class="btn btn-secondary">
+                            <i class="fas fa-briefcase"></i> View Projects
+                        </a>
+                    </div>
+                    <div class="hero-social">
+                        <a href="https://www.behance.net/purvipatel11" target="_blank" class="social-link">
+                            <i class="fab fa-behance"></i>
+                        </a>
+                        <a href="mailto:purvipatel2800@gmail.com" class="social-link">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="tel:7359829219" class="social-link">
+                            <i class="fas fa-phone"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <p>Scroll Down</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-card glass-card">
+                    <div class="about-text">
+                        <p class="about-description">
+                            Passionate Graphic Design & UI/UX Designer with expertise in design principles
+                            and user-centered design, committed to creating visually appealing and
+                            user-friendly interfaces.
+                        </p>
+                        <div class="personal-info">
+                            <div class="info-item">
+                                <i class="fas fa-graduation-cap"></i>
+                                <div>
+                                    <h4>Qualification</h4>
+                                    <p>B.com</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-calendar"></i>
+                                <div>
+                                    <h4>Date of Birth</h4>
+                                    <p>28-07-1997</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-venus"></i>
+                                <div>
+                                    <h4>Gender</h4>
+                                    <p>Female</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <h4>Location</h4>
+                                    <p>Ahmedabad</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-language"></i>
+                                <div>
+                                    <h4>Languages</h4>
+                                    <p>Gujrati, Hindi, English</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section">
+        <div class="container">
+            <h2 class="section-title">Skills & Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-card glass-card">
+                    <div class="skill-icon">
+                        <img src="Icon/Adobe Illustrator-02.svg" alt="Adobe Illustrator">
+                    </div>
+                    <h3>Adobe Illustrator</h3>
+                    <div class="skill-progress">
+                        <div class="progress-bar" data-progress="90"></div>
+                    </div>
+                </div>
+                <div class="skill-card glass-card">
+                    <div class="skill-icon">
+                        <img src="Icon/Adobe Photoshop-01.svg" alt="Adobe Photoshop">
+                    </div>
+                    <h3>Adobe Photoshop</h3>
+                    <div class="skill-progress">
+                        <div class="progress-bar" data-progress="85"></div>
+                    </div>
+                </div>
+                <div class="skill-card glass-card">
+                    <div class="skill-icon">
+                        <img src="Icon/Adobe After Effects-03.svg" alt="Adobe After Effects">
+                    </div>
+                    <h3>Adobe After Effects</h3>
+                    <div class="skill-progress">
+                        <div class="progress-bar" data-progress="70"></div>
+                    </div>
+                </div>
+                <div class="skill-card glass-card">
+                    <div class="skill-icon">
+                        <img src="Icon/Canva-04.svg" alt="Canva">
+                    </div>
+                    <h3>Canva</h3>
+                    <div class="skill-progress">
+                        <div class="progress-bar" data-progress="95"></div>
+                    </div>
+                </div>
+                <div class="skill-card glass-card">
+                    <div class="skill-icon">
+                        <img src="Icon/Figma-05.svg" alt="Figma">
+                    </div>
+                    <h3>Figma</h3>
+                    <div class="skill-progress">
+                        <div class="progress-bar" data-progress="85"></div>
+                    </div>
+                </div>
+                <div class="skill-card glass-card">
+                    <div class="skill-icon">
+                        <img src="Icon/Adobe XD-06.svg" alt="Adobe XD">
+                    </div>
+                    <h3>Adobe XD</h3>
+                    <div class="skill-progress">
+                        <div class="progress-bar" data-progress="70"></div>
+                    </div>
+                </div>
+                <div class="skill-card glass-card">
+                    <div class="skill-icon">
+                        <img src="Icon/Filmora-07.svg" alt="Filmora">
+                    </div>
+                    <h3>Filmora</h3>
+                    <div class="skill-progress">
+                        <div class="progress-bar" data-progress="85"></div>
+                    </div>
+                </div>
+                <div class="skill-card glass-card">
+                    <div class="skill-icon">
+                        <img src="Icon/VN-08.svg" alt="VN">
+                    </div>
+                    <h3>VN</h3>
+                    <div class="skill-progress">
+                        <div class="progress-bar" data-progress="80"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience section">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item glass-card">
+                    <div class="timeline-icon">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Graphic Design & UI/UX Designer</h3>
+                        <h4>Ag Digitals Marketing & Gandhi Media Solutions</h4>
+                        <p class="timeline-date">2023 - Present</p>
+                        <p class="timeline-description">
+                            Creating innovative design solutions for various clients, focusing on
+                            user-centered design principles and visual excellence.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education section">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="education-grid">
+                <div class="education-card glass-card">
+                    <div class="education-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Certification Courses</h3>
+                    <h4>Institute Name: Black and White Multimedia Education</h4>
+                    <p class="education-year">Passing Year: May 2023</p>
+                </div>
+                <div class="education-card glass-card">
+                    <div class="education-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Graduation Field</h3>
+                    <h4>College Name: J.M. Panera</h4>
+                    <p class="education-year">Passing Year: 2021</p>
+                </div>
+                <div class="education-card glass-card">
+                    <div class="education-icon">
+                        <i class="fas fa-school"></i>
+                    </div>
+                    <h3>Higher Secondary Certificate</h3>
+                </div>
+                <h3>D-Zinewar 2K22</h3>
+                <p>Participated in D-Zinewar 2K22, Surat</p>
+            </div>
+            <div class="achievement-card glass-card">
+                <div class="achievement-icon">
+                    <i class="fas fa-award"></i>
+                </div>
+                <h3>Teknothon</h3>
+                <p>Participated in Teknothon, Ahmedabad</p>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-card glass-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email</h3>
+                        <a href="mailto:purvipatel2800@gmail.com">purvipatel2800@gmail.com</a>
+                    </div>
+                    <div class="contact-card glass-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3>Phone</h3>
+                        <a href="tel:7359829219">7359829219</a>
+                    </div>
+                    <div class="contact-card glass-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>Location</h3>
+                        <p>Ahmedabad</p>
+                    </div>
+                    <div class="contact-card glass-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-behance"></i>
+                        </div>
+                        <h3>Behance</h3>
+                        <a href="https://www.behance.net/purvipatel11" target="_blank">View Portfolio</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Gopi Zalavadiya. All rights reserved.</p>
+            <div class="footer-social">
+                <a href="https://www.behance.net/purvipatel11" target="_blank" class="social-link">
+                    <i class="fab fa-behance"></i>
+                </a>
+                <a href="mailto:purvipatel2800@gmail.com" class="social-link">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="tel:7359829219" class="social-link">
+                    <i class="fas fa-phone"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
