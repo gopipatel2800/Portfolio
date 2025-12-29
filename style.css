@@ -512,9 +512,51 @@ body {
     transition: width 1s ease;
 }
 
-/* ===================================
-   Experience Section
-   =================================== */
+/* Responsive Skills Section */
+.skill-icon img {
+    width: 60%;
+    height: 60%;
+    object-fit: contain;
+}
+
+@media (max-width: 768px) {
+    .skills-grid {
+        gap: 20px;
+    }
+
+    .skill-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 2rem;
+    }
+
+    .skill-card h3 {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .skill-card {
+        padding: 20px 15px;
+    }
+
+    .skill-icon {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 15px;
+    }
+
+    .skill-card h3 {
+        font-size: 1rem;
+        margin-bottom: 15px;
+    }
+}
+
 .timeline {
     max-width: 800px;
     margin: 0 auto;
