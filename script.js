@@ -7,17 +7,17 @@ class ParticleBackground {
         this.ctx = this.canvas.getContext('2d');
         this.particles = [];
         this.particleCount = 100;
-        
+
         this.init();
         this.animate();
-        
+
         window.addEventListener('resize', () => this.init());
     }
-    
+
     init() {
         this.canvas.width = window.innerWidth;
         this.canvas.height = window.innerHeight;
-        
+
         this.particles = [];
         for (let i = 0; i < this.particleCount; i++) {
             this.particles.push({
@@ -29,30 +29,30 @@ class ParticleBackground {
             });
         }
     }
-    
+
     animate() {
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-        
+
         this.particles.forEach(particle => {
             particle.x += particle.vx;
             particle.y += particle.vy;
-            
+
             if (particle.x < 0 || particle.x > this.canvas.width) particle.vx *= -1;
             if (particle.y < 0 || particle.y > this.canvas.height) particle.vy *= -1;
-            
+
             this.ctx.beginPath();
             this.ctx.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2);
             this.ctx.fillStyle = 'rgba(102, 126, 234, 0.5)';
             this.ctx.fill();
         });
-        
+
         // Draw connections
         this.particles.forEach((p1, i) => {
             this.particles.slice(i + 1).forEach(p2 => {
                 const dx = p1.x - p2.x;
                 const dy = p1.y - p2.y;
                 const distance = Math.sqrt(dx * dx + dy * dy);
-                
+
                 if (distance < 150) {
                     this.ctx.beginPath();
                     this.ctx.strokeStyle = `rgba(102, 126, 234, ${0.2 * (1 - distance / 150)})`;
@@ -63,7 +63,7 @@ class ParticleBackground {
                 }
             });
         });
-        
+
         requestAnimationFrame(() => this.animate());
     }
 }
@@ -81,25 +81,25 @@ class TypeWriter {
         this.isDeleting = false;
         this.type();
     }
-    
+
     type() {
         const current = this.wordIndex % this.words.length;
         const fullTxt = this.words[current];
-        
+
         if (this.isDeleting) {
             this.txt = fullTxt.substring(0, this.txt.length - 1);
         } else {
             this.txt = fullTxt.substring(0, this.txt.length + 1);
         }
-        
+
         this.element.textContent = this.txt;
-        
+
         let typeSpeed = 150;
-        
+
         if (this.isDeleting) {
             typeSpeed /= 2;
         }
-        
+
         if (!this.isDeleting && this.txt === fullTxt) {
             typeSpeed = this.wait;
             this.isDeleting = true;
@@ -108,7 +108,7 @@ class TypeWriter {
             this.wordIndex++;
             typeSpeed = 500;
         }
-        
+
         setTimeout(() => this.type(), typeSpeed);
     }
 }
@@ -118,24 +118,24 @@ class TypeWriter {
 // ===================================
 function initSmoothScroll() {
     const navLinks = document.querySelectorAll('.nav-link');
-    
+
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
             const targetId = link.getAttribute('href');
             const targetSection = document.querySelector(targetId);
-            
+
             if (targetSection) {
                 const offsetTop = targetSection.offsetTop - 70;
                 window.scrollTo({
                     top: offsetTop,
                     behavior: 'smooth'
                 });
-                
+
                 // Update active link
                 navLinks.forEach(l => l.classList.remove('active'));
                 link.classList.add('active');
-                
+
                 // Close mobile menu if open
                 const navMenu = document.getElementById('nav-menu');
                 navMenu.classList.remove('active');
@@ -149,7 +149,7 @@ function initSmoothScroll() {
 // ===================================
 function initNavbarScroll() {
     const navbar = document.getElementById('navbar');
-    
+
     window.addEventListener('scroll', () => {
         if (window.scrollY > 100) {
             navbar.classList.add('scrolled');
@@ -165,7 +165,7 @@ function initNavbarScroll() {
 function initMobileMenu() {
     const hamburger = document.getElementById('hamburger');
     const navMenu = document.getElementById('nav-menu');
-    
+
     hamburger.addEventListener('click', () => {
         navMenu.classList.toggle('active');
         hamburger.classList.toggle('active');
@@ -180,12 +180,12 @@ function initScrollAnimations() {
         threshold: 0.1,
         rootMargin: '0px 0px -100px 0px'
     };
-    
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
-                
+
                 // Animate skill progress bars
                 if (entry.target.classList.contains('skill-card')) {
                     const progressBar = entry.target.querySelector('.progress-bar');
@@ -199,7 +199,7 @@ function initScrollAnimations() {
             }
         });
     }, observerOptions);
-    
+
     // Observe all sections and cards
     const elementsToAnimate = document.querySelectorAll('.section, .glass-card, .skill-card, .project-card, .achievement-card, .education-card, .timeline-item');
     elementsToAnimate.forEach(el => {
@@ -214,19 +214,19 @@ function initScrollAnimations() {
 function initActiveSection() {
     const sections = document.querySelectorAll('.section');
     const navLinks = document.querySelectorAll('.nav-link');
-    
+
     window.addEventListener('scroll', () => {
         let current = '';
-        
+
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
             const sectionHeight = section.clientHeight;
-            
+
             if (window.scrollY >= sectionTop - 200) {
                 current = section.getAttribute('id');
             }
         });
-        
+
         navLinks.forEach(link => {
             link.classList.remove('active');
             if (link.getAttribute('href') === `#${current}`) {
@@ -243,7 +243,7 @@ function initParallax() {
     window.addEventListener('scroll', () => {
         const scrolled = window.scrollY;
         const hero = document.querySelector('.hero-content');
-        
+
         if (hero) {
             hero.style.transform = `translateY(${scrolled * 0.5}px)`;
             hero.style.opacity = 1 - scrolled / 600;
@@ -256,12 +256,12 @@ function initParallax() {
 // ===================================
 function initHoverEffects() {
     const cards = document.querySelectorAll('.glass-card, .project-card, .skill-card');
-    
+
     cards.forEach(card => {
         card.addEventListener('mouseenter', () => {
             card.style.transform = 'translateY(-10px) scale(1.02)';
         });
-        
+
         card.addEventListener('mouseleave', () => {
             card.style.transform = 'translateY(0) scale(1)';
         });
@@ -273,15 +273,15 @@ function initHoverEffects() {
 // ===================================
 function initLightbox() {
     // Create lightbox elements if they don't exist
-    if (!document.querySelector('.lightbox-modal')) {
-        const lightbox = document.createElement('div');
-        lightbox.className = 'lightbox-modal';
-        lightbox.innerHTML = `
-            <div class="lightbox-close">&times;</div>
-            <img class="lightbox-content" src="" alt="Project Preview">
-        `;
-        document.body.appendChild(lightbox);
-    }
+    // if (!document.querySelector('.lightbox-modal')) {
+    //     const lightbox = document.createElement('div');
+    //     lightbox.className = 'lightbox-modal';
+    //     lightbox.innerHTML = `
+    //         <div class="lightbox-close">&times;</div>
+    //         <img class="lightbox-content" src="" alt="Project Preview">
+    //     `;
+    //     document.body.appendChild(lightbox);
+    // }
 
     const lightbox = document.querySelector('.lightbox-modal');
     const lightboxImg = lightbox.querySelector('.lightbox-content');
@@ -330,7 +330,7 @@ function initLightbox() {
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize particle background
     new ParticleBackground();
-    
+
     // Initialize typing effect
     const typedElement = document.getElementById('typed-text');
     if (typedElement) {
@@ -341,7 +341,7 @@ document.addEventListener('DOMContentLoaded', () => {
             'Problem Solver'
         ], 2000);
     }
-    
+
     // Initialize all features
     initSmoothScroll();
     initNavbarScroll();
@@ -351,7 +351,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initParallax();
     initHoverEffects();
     initLightbox();
-    
+
     // Add loading animation
     document.body.style.opacity = '0';
     setTimeout(() => {
